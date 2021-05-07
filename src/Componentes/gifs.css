@@ -1,0 +1,9 @@
+.gifs{
+    width: 1100px;
+    column-count: 4;
+}
+
+.gif{
+    margin: 10px;
+    background-color: red;
+}

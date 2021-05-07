@@ -1,0 +1,15 @@
+.boton-mas-gifs{
+    margin: 10px;
+    padding: 10px;
+    font-weight: 400;
+    color: #fff;
+    background-color: #A2E0F3;
+    outline: none;
+    border: none;
+    font-size: 20px;
+}
+.gifs-section-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

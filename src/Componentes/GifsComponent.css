@@ -1,0 +1,21 @@
+.gifs-search-container{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+
+}
+.tittle-section{
+    font-weight: 900;
+    font-size: 30px;
+}
+.boton-mas-gifs{
+    margin: 10px;
+    padding: 10px;
+    align-self: center;
+    font-weight: 400;
+    color: #fff;
+    background-color: #A2E0F3;
+    outline: none;
+    border: none;
+    font-size: 20px;
+}

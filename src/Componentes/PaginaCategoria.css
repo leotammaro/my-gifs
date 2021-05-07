@@ -1,0 +1,14 @@
+.section-container{
+    column-count: 4;
+    width: 1100px;
+    margin-top: 10px;
+}
+.tittle-section{
+    color: #fff;
+    margin: 30px 10px;
+}
+
+.image-gif{
+    margin: 10px 10px;
+    border-radius:5px;
+}

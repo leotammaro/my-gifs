@@ -1,0 +1,13 @@
+.boton-nuevos-gifs{
+    margin: 30px;
+    background-color: #A2E0F3;
+    border: none;
+    color: #fff;
+    height: 35px;
+    font-size: 25px;
+    cursor: pointer;
+    padding: 0px 10px;
+}
+.boton-nuevos-gifs:hover{
+    color: #000;
+}
