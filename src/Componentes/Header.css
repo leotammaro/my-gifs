@@ -44,3 +44,11 @@
     position: relative;
     top: 12px;
 }
+.dark .input-buscador{
+    background-color: #fff;
+    color: rgb(32, 32, 32);
+}
+.ligth .input-buscador{
+    background-color: #EEF3F8;
+    color: rgb(32, 32, 32);
+}

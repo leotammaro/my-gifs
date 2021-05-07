@@ -1,13 +1,15 @@
-import React,{useState,useEffect} from "react";
+import React,{useState,useEffect,useContext} from "react";
 import "./Header.css";
 import {Link,useHistory,useParams} from "react-router-dom";
 import Logo from "../assets/logo.svg"
+import {Context} from "../context/Context";
 
 export default function Header(){
     const [searchTerm,setSearchTerm] = useState("");
     const [keyword,setKeyword] = useState("")
     const {location,push} = useHistory();
     const {pathname} = location
+    const {theme} = useContext(Context)
     function handleChange(e){
         setSearchTerm(e.target.value);
     }
@@ -18,7 +20,7 @@ export default function Header(){
     useEffect(()=>{
        pathname.indexOf("/search") >= 0 && setKeyword(pathname.substr(8))
     },[keyword])
-    return <div className="header-container">
+    return <div className={`header-container ${theme}`}>
                 <Link to="/" onClick={()=>{
                     setKeyword("")
                     setSearchTerm("")

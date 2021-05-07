@@ -3,7 +3,7 @@
   padding: 0;
 }
 .App{
-  background-color: rgb(32, 32, 32);
+  
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -13,4 +13,12 @@
 .search-container{
   display: flex;
   align-items: center;
+}
+.dark{
+  background-color: rgb(32, 32, 32);
+  color: #fff;
+}
+.ligth{
+  background-color: #fff;
+  color: rgb(32, 32, 32);
 }
