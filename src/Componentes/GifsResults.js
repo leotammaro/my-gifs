@@ -4,6 +4,7 @@ import BuscadorAPI from '../js/BuscadorAPI'
 import GifsComponent from './GifsComponent'
 import Spinner from "./Spinner";
 import "./GifsResults.css";
+import BotonNuevosGifs from "./BotonNuevosGifs"
 
 function GifsResults() {
     const {keyword} = useParams()
@@ -24,7 +25,7 @@ function GifsResults() {
         searchGifs();     
     },[page])
 
-    function handleChangeNewGifs(){
+    function handleNewGifs(){
         setPage(page+1);
     }
 
@@ -35,11 +36,11 @@ function GifsResults() {
 
     return (
         <div>
-        {loading ? <Spinner/> : 
-        <div className="gifs-section-container">
-            <GifsComponent dataGifs={gifsResponse} section={keyword} />
-            <button type="button" className="boton-mas-gifs" onClick={handleChangeNewGifs}>Mostrar Mas</button>
-        </div>}
+            {loading ? <Spinner/> : 
+            <div className="gifs-section-container">
+                <GifsComponent dataGifs={gifsResponse} section={keyword} />
+                <BotonNuevosGifs  nuevosGifs={handleNewGifs}></BotonNuevosGifs>
+            </div>}
         </div>
     )
 }

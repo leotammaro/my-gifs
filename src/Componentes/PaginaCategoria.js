@@ -14,19 +14,24 @@ export default function PaginaCategoria(){
     const [page,setPage] = useState(0)
 
     useEffect(async ()=>{
-        const response = await LoadSection(section,page)
+        const response = await LoadSection(section,0)
         setDataGifs(response);
         setLoading(false)
         console.log(loading)
     },[])
+
     useEffect(async()=>{
         const response = await LoadSection(section,page)
         setDataGifs([...dataGifs,...response])
+        console.log(page)
+        
     },[page])
 
     function handleNewGifs(){
         setPage(page+1)
     }
+    
+
     return <div className="gifs-trending-container">
                 <span className={`tittle-section ${theme}`}>{section} GIFS</span>
                 {loading ? <Spinner/> :
@@ -39,7 +44,7 @@ export default function PaginaCategoria(){
                         })
                         }
                     </div>
-                    <BotonNuevosGifs gifsNuevos={handleNewGifs}></BotonNuevosGifs>
+                    <BotonNuevosGifs  nuevosGifs={handleNewGifs}></BotonNuevosGifs>
                 </div>
                  }
                 
