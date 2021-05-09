@@ -13,7 +13,7 @@ import {Context} from "./context/Context";
 import ThemeManager from "./Componentes/ThemeManager";
 
 function App() {
-  const [theme,setTheme] = useState("ligth")
+  const [theme,setTheme] = useState("dark")
   return (
     <Context.Provider value={{theme,setTheme}}>
       <Router>

@@ -1,5 +1,5 @@
-export const LoadSection = (categorie,count)=>{
-    return fetch(`https://api.giphy.com/v1/gifs/${categorie}?api_key=5f7wbKwbAW8jGWILRYbaJHmfKlHa2KlI&q&limit=${count}`)
+export const LoadSection = (categorie,page)=>{
+    return fetch(`https://api.giphy.com/v1/gifs/${categorie}?api_key=5f7wbKwbAW8jGWILRYbaJHmfKlHa2KlI&q&limit=20&offset=${page*20}`)
     .then(data=>data.json())
     .then(response=>{
         const {data} = response

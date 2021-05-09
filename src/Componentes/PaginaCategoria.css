@@ -6,6 +6,7 @@
 .tittle-section{
     color: #fff;
     margin: 30px 10px;
+    align-self: flex-start;
 }
 
 .image-gif{
@@ -14,4 +15,16 @@
 }
 .ligth{
     color: #000;
+}
+.gifs-trending-container{
+    display: flex;
+    flex-direction: column;
+    width: 1100px;
+    align-items: center;
+}
+.gifs-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
