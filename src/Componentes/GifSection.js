@@ -12,7 +12,6 @@ export default function GifSection({categorie}){
     useEffect(async()=>{
     const response =await LoadSection(categorie,7) 
     setDataGifs(response)
-    console.log(theme)
     },[])
     
     return <div className="gifs-container-section">
