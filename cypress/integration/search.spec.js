@@ -20,7 +20,7 @@ describe("Testeando nuestra app",()=>{
         cy.get(".boton-buscador").click()
 
     })
-    it.skip("Probando si el boton de opcion nocturno/dia funciona correctamente",()=>{
+    it("Probando si el boton de opcion nocturno/dia funciona correctamente",()=>{
         cy.get(".switch").click()
         cy.get("[data-test='app-container']").should("have.class","ligth")
         cy.get(".switch").click()
