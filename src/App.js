@@ -17,7 +17,7 @@ function App() {
   return (
     <Context.Provider value={{theme,setTheme}}>
       <Router>
-        <div className={`App ${theme}`}>
+        <div className={`App ${theme}`} data-test="app-container">
           <ThemeManager />
         <div className="search-container">
         <Header/>

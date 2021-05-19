@@ -27,7 +27,7 @@ export default function Header(){
                 }}>
                     <img src={Logo} height="60" className="logo-header"/>
                 </Link>
-                <form  className="buscador" onSubmit={handleClick}>
+                <form  className="buscador" onSubmit={handleClick} data-test-id="buscador">
                     <input type="text" placeholder="Buscar un gif..."  className="input-buscador" onChange={handleChange} value={searchTerm || keyword}/>
                     <button className="boton-buscador">Buscar</button>
                 </form>

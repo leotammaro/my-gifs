@@ -10,7 +10,7 @@ export default function GifSection({categorie}){
     const height=150;
     const colors = ["#AFE4C1","#B5EB58","#EA8B30","#D4374A","#0099FF"];
     useEffect(async()=>{
-    const response =await LoadSection(categorie,7) 
+    const response =await LoadSection(categorie,0) 
     setDataGifs(response)
     },[])
     
@@ -19,7 +19,7 @@ export default function GifSection({categorie}){
            <Link to={`/section/${categorie}`} className={`tittle-categorie ${theme}`} ><span >{categorie}</span></Link>
            <Link to={`/section/${categorie}`} className={`tittle-categorie ${theme}`}><span>Show All Gifs</span></Link>
        </div>
-        <div className="section-gifs">
+        <div className="section-gifs" data-test-id='gifs-trending'>
            {dataGifs.map(gif=>
             { const colorRandom = colors[Math.floor(Math.random()*5)]
                 return <img 

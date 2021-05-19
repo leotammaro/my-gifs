@@ -9,7 +9,7 @@ function GifsComponent({dataGifs,section}) {
 
     return <div className="gifs-search-container">
                 <span className={`tittle-section ${theme}`}>{section}</span>
-                <div className="section-container">
+                <div className="section-container" data-test-id="gifs-searched">
                     {dataGifs.map(gif=>{
                         const colorRandom = colors[Math.floor(Math.random()*5)]
                         return  <img key={gif.id} src={gif.url} width={width} className="image-gif" height={width*gif.height/gif.width} style={{background:colorRandom}}></img>         
